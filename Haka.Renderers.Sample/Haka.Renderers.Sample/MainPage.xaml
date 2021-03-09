@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:hkRenderers="clr-namespace:Haka.Renderers;assembly=Haka.Renderers"
+    x:Class="Haka.Renderers.Sample.MainPage"
+    BackgroundColor="AliceBlue"
+    >
+    <StackLayout Margin="20">
+        <hkRenderers:FrameRipple
+            BackgroundColor="#FFF"
+            BorderColor="Blue"
+            CornerRadius="10, 10, 20, 40"
+            Elevation="25"
+            Padding="20"
+            Margin="20"
+            >
+            <StackLayout>
+                <Label Text="Label" />
+                <Label Text="Label" />
+                <Label Text="Label" />
+                <Label Text="Label" />
+            </StackLayout>
+        </hkRenderers:FrameRipple>
+        <hkRenderers:FrameRipple
+            BackgroundColor="Azure"
+            BorderColor="LightCoral"
+            BorderWidth="3"
+            CornerRadius="10, 10, 20, 40"
+            Elevation="1"
+            Padding="20"
+            RippleColor="Blue"
+            Margin="20"
+            >
+            <StackLayout>
+                <Label Text="Label" />
+                <Label Text="Label" />
+                <Label Text="Label" />
+                <Label Text="Label" />
+            </StackLayout>
+        </hkRenderers:FrameRipple>
+    </StackLayout>
+</ContentPage>

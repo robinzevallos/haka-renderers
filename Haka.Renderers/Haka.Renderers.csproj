@@ -1,0 +1,36 @@
+﻿<Project Sdk="MSBuild.Sdk.Extras/3.0.23">
+
+	<PropertyGroup>
+		<TargetFrameworks>netstandard2.0;MonoAndroid10.0;Xamarin.iOS10;</TargetFrameworks>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Haka.Core" Version="0.1.13-alpha" />
+		<PackageReference Include="Kasay.BindableProperty.Fody" Version="1.0.6" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<compile Remove="**\*.android.cs" />
+		<compile Remove="**\*.android.*.cs" />
+		<Compile Remove="**\*.ios.cs" />
+		<Compile Remove="**\*.ios.*.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="**\*.android.cs" />
+		<None Include="**\*.android.*.cs" />
+		<None Include="**\*.ios.cs" />
+		<None Include="**\*.ios.*.cs" />
+	</ItemGroup>
+
+	<ItemGroup Condition=" $(TargetFramework.StartsWith('MonoAndroid')) ">
+		<Compile Include="**\*.android.cs" />
+		<Compile Include="**\*.android.*.cs" />
+	</ItemGroup>
+
+	<ItemGroup Condition=" $(TargetFramework.StartsWith('Xamarin.iOS')) ">
+		<Compile Include="**\*.ios.cs" />
+		<Compile Include="**\*.ios.*.cs" />
+	</ItemGroup>
+
+</Project>
