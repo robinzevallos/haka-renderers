@@ -10,7 +10,7 @@
         <hkRenderers:FrameRipple
             BackgroundColor="#FFF"
             BorderColor="Blue"
-            CornerRadius="10, 10, 20, 40"
+            CornerRadius="15"
             Elevation="25"
             Padding="20"
             Margin="20"
@@ -23,10 +23,10 @@
             </StackLayout>
         </hkRenderers:FrameRipple>
         <hkRenderers:FrameRipple
-            BackgroundColor="Azure"
-            BorderColor="LightCoral"
-            BorderWidth="3"
-            CornerRadius="10, 10, 20, 40"
+            BackgroundColor="#AEDDC9"
+            BorderColor="#F58996"
+            BorderWidth="5"
+            CornerRadius="50, 0"
             Elevation="1"
             Padding="20"
             RippleColor="Blue"

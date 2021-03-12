@@ -110,6 +110,8 @@ namespace Haka.Renderers
 
             NativeView.Layer.Mask = mask;
 
+            Layer.BackgroundColor = FrameRipple.BackgroundColor.ToCGColor();
+
             var shadowLayer = new CAShapeLayer
             {
                 Path = pathCorners.CGPath,
@@ -140,19 +142,19 @@ namespace Haka.Renderers
                 roundedCorners |= UIRectCorner.TopLeft;
             }
 
-            if (cornerRadius.Right > 0)
+            if (cornerRadius.Top > 0)
             {
                 roundedCorners |= UIRectCorner.TopRight;
-            }
-
-            if (cornerRadius.Left > 0)
-            {
-                roundedCorners |= UIRectCorner.BottomLeft;
             }
 
             if (cornerRadius.Right > 0)
             {
                 roundedCorners |= UIRectCorner.BottomRight;
+            }
+
+            if (cornerRadius.Bottom > 0)
+            {
+                roundedCorners |= UIRectCorner.BottomLeft;
             }
 
             return roundedCorners;
@@ -163,10 +165,10 @@ namespace Haka.Renderers
             var commonCornerRadius = cornerRadius.Left;
             if (commonCornerRadius <= 0)
             {
-                commonCornerRadius = cornerRadius.Right;
+                commonCornerRadius = cornerRadius.Top;
                 if (commonCornerRadius <= 0)
                 {
-                    commonCornerRadius = cornerRadius.Left;
+                    commonCornerRadius = cornerRadius.Bottom;
                     if (commonCornerRadius <= 0)
                     {
                         commonCornerRadius = cornerRadius.Right;
