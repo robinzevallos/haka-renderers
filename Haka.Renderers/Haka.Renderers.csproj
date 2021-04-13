@@ -5,7 +5,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Haka.Core" Version="0.1.13-alpha" />
+		<PackageReference Include="Haka.Core" Version="0.2.0" />
 		<PackageReference Include="Kasay.BindableProperty.Fody" Version="1.0.6" />
 	</ItemGroup>
 

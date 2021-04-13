@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <PropertyGroup>
+    <Authors>Robin Zevallos</Authors>
+    <Description>Set of custom controls with renderers for Xamarin.Forms</Description>
+    <PackageTags>Xamarin.Forms, Xamarin, Control, Custom, Component, Ripple</PackageTags>
+    <Version>0.0.1</Version>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageIcon>icon.png</PackageIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="icon.png" Pack="true" PackagePath=""/>
+  </ItemGroup>
+  
+</Project>

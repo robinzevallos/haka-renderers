@@ -8,12 +8,13 @@
     >
     <StackLayout Margin="20">
         <hkRenderers:FrameRipple
-            BackgroundColor="#FFF"
-            BorderColor="Blue"
-            CornerRadius="15"
-            Elevation="25"
-            Padding="20"
+            BackgroundColor="#AEDDC9"
+            BorderColor="#F58996"
+            BorderWidth="5"
+            CornerRadius="50, 0"
             Margin="20"
+            Padding="20"
+            RippleColor="Blue"
             >
             <StackLayout>
                 <Label Text="Label" />
@@ -23,14 +24,12 @@
             </StackLayout>
         </hkRenderers:FrameRipple>
         <hkRenderers:FrameRipple
-            BackgroundColor="#AEDDC9"
-            BorderColor="#F58996"
-            BorderWidth="5"
-            CornerRadius="50, 0"
-            Elevation="1"
-            Padding="20"
-            RippleColor="Blue"
+            BackgroundColor="#FFF"
+            BorderColor="Blue"
+            CornerRadius="15"
+            Elevation="10"
             Margin="20"
+            Padding="20"
             >
             <StackLayout>
                 <Label Text="Label" />

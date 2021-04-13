@@ -2,6 +2,7 @@
 using Kasay.BindableProperty;
 using System;
 using Xamarin.Forms;
+//For Kasay.BindableProperty
 using static System.Type;
 
 namespace Haka.Renderers

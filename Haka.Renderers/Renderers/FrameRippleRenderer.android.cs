@@ -45,8 +45,8 @@ namespace Haka.Renderers
 
         void Initialize()
         {
-            SetBackground(FrameRipple.RippleColor, FrameRipple.BorderWidth);
             CardElevation = FrameRipple.Elevation;
+            SetBackground(FrameRipple.RippleColor, FrameRipple.BorderWidth);
         }
 
         void SetCornerRadius(GradientDrawable backgroundGradient)
@@ -62,18 +62,18 @@ namespace Haka.Renderers
 
             var cornerRadii = new[]
             {
-                    topLeftCorner,
-                    topLeftCorner,
+                topLeftCorner,
+                topLeftCorner,
 
-                    topRightCorner,
-                    topRightCorner,
+                topRightCorner,
+                topRightCorner,
 
-                    bottomRightCorner,
-                    bottomRightCorner,
+                bottomRightCorner,
+                bottomRightCorner,
 
-                    bottomLeftCorner,
-                    bottomLeftCorner,
-                };
+                bottomLeftCorner,
+                bottomLeftCorner,
+            };
 
             backgroundGradient?.SetCornerRadii(cornerRadii);
         }
