@@ -1,4 +1,4 @@
-[![NuGet Status](http://img.shields.io/nuget/v/Kasay.BindableProperty.Fody.svg?style=flat&max-age=86400)](https://www.nuget.org/packages/Haka.Renderers)
+[![NuGet Status](http://img.shields.io/nuget/v/Haka.Renderers.svg?style=flat&max-age=86400)](https://www.nuget.org/packages/Haka.Renderers)
 
 <img 
     src="https://raw.githubusercontent.com/robinzevallos/haka-renderers/main/Haka.Renderers/icon.png" 
