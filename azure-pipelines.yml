@@ -1,0 +1,49 @@
+trigger:
+- main
+
+pool:
+  vmImage: 'windows-latest'
+
+variables:
+- group: haka-renderers-variables
+- name: version-full
+  value: $(Major).$(Minor).$(Patch)
+
+steps:
+- task: DotNetCoreCLI@2
+  displayName: 'dotnet restore'
+  inputs:
+    command: 'restore'
+    projects: $(project)
+
+- task: MSBuild@1
+  inputs:
+    configuration: $(buildConfiguration)
+    msbuildArguments: '-t:build'
+    solution: '$(project)'
+
+# Pack private
+- task: MSBuild@1
+  inputs:
+    configuration: $(buildConfiguration)
+    msbuildArguments: '-t:pack -p:Version=$(version-full) -p:PackageOutputPath=$(Build.ArtifactStagingDirectory)/private'
+    solution: '$(project)'
+
+# Pack public
+- task: MSBuild@1
+  inputs:
+    configuration: $(buildConfiguration)
+    msbuildArguments: '-t:pack -p:Version=$(version-full) -p:PackageOutputPath=$(Build.ArtifactStagingDirectory)/public'
+    solution: '$(project)'
+
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: '$(build.sourcesdirectory)'
+    Contents: '**\bin\$(BuildConfiguration)\**\*.nupkg'
+    TargetFolder: '$(build.artifactstagingdirectory)'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
