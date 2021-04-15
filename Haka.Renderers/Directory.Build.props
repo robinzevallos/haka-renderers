@@ -9,6 +9,7 @@
 
   <PropertyGroup>
     <PackageIcon>icon.png</PackageIcon>
+	<PackageProjectUrl>https://github.com/robinzevallos/haka-renderers</PackageProjectUrl>
   </PropertyGroup>
 
   <ItemGroup>
