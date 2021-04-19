@@ -131,6 +131,11 @@ namespace Haka.Renderers
             shadowLayer.ShadowOffset = new CGSize(0, elevation);
 
             NativeView.Superview.Layer.InsertSublayerBelow(shadowLayer, NativeView.Layer);
+
+            var positionX = Layer.Position.X - FrameRipple.AdjustShadowPosition;
+            var positionY = Layer.Position.Y - FrameRipple.AdjustShadowPosition;
+
+            shadowLayer.Position = new CGPoint(positionX, positionY);
         }
 
         UIRectCorner RetrieveRoundedCorners(Thickness cornerRadius)

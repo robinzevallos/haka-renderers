@@ -21,6 +21,8 @@ namespace Haka.Renderers
 
         public string OnTap { get; set; }
 
+        public int AdjustShadowPosition { get; set; }
+
         public FrameRipple()
         {
             this.RegisterMethod(nameof(OnTap), nameof(Tap));
